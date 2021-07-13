@@ -23,6 +23,7 @@
         <p>the progresive javascript framerwork</p>
       </header>
       <p v-once>{{ isActive? name.toUpperCase() : name }}</p>
+      <p v-once>{{ getName() }}</p>
       <footer>
         <p>Copyright 2021</p>
       </footer>
@@ -38,6 +39,11 @@
       const vm = new Vue({
         el: "#app",
         data: member,
+        methods: {
+          getName: function () {
+            return `Hello, ${this.name}`;
+          },
+        },
       });
     </script>
   </body>
