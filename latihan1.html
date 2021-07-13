@@ -22,7 +22,7 @@
         <h1>what is vue?</h1>
         <p>the progresive javascript framerwork</p>
       </header>
-
+      <p v-once>{{ isActive? name.toUpperCase() : name }}</p>
       <footer>
         <p>Copyright 2021</p>
       </footer>
@@ -30,12 +30,14 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script>
+      const member = {
+        name: "Rizky Ramadhan",
+        message: "Testing vue",
+        isActive: true,
+      };
       const vm = new Vue({
         el: "#app",
-        data: {
-          name: "Rizky Ramadhan",
-          message: "Testing vue",
-        },
+        data: member,
       });
     </script>
   </body>
