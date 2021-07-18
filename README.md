@@ -1,2 +1,2 @@
 # Vue Basic
- Learning vue js
+ Learning vue js dari youtube
